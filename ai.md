@@ -4,7 +4,7 @@ figureTitle: "Kuva"
 figPrefix: "kuva"
 ---
 
-Tämän materiaalin tarkoituksena on auttaa ohjelmistokehittäjiä ymmärtämään, mitä AI (Artificial Intelligence, tekoäly) on, miten se liittyy ohjelmistokehitykseen, ja miten hyödyntää AI-työkaluja, kuten Visual Studio Coden Copilotia, tehokkaasti omassa työssään.
+Tämän materiaalin tarkoituksena on auttaa ohjelmistokehittäjiä ymmärtämään, mitä AI (Artificial Intelligence, tekoäly) on, miten se liittyy ohjelmistokehitykseen ja miten hyödyntää AI-työkaluja, kuten Visual Studio Coden Copilotia, tehokkaasti omassa työssään.
 
 ## Mistä puhumme, kun puhumme AI:sta?
 
@@ -22,7 +22,7 @@ Esimerkiksi sovellus, joka oppii tunnistamaan roskapostin sähköpostiesimerkeis
 
 Konkreettisesti valtava määrä sähköpostiesimerkkejä oikeista posteista ja roskaposteista syötetään mallille, joka säilöö ne sisäiseen tilaan ja oppii yhdistämään tietyt piirteet (kuten tietyt sanat, lähettäjät, linkit jne.) roskapostiin. Tämä on koneoppimisen ydin: malli oppii datasta ilman erillisiä sääntöjä. Ainoa, mitä tarvitsee tehdä, on antaa sille tarpeeksi dataa ja oikeat vastaukset (tässä tapauksessa merkinnät siitä, mikä on roskapostia ja mikä ei).
 
-Käytännössä tällainen malli antaa todennäköisyyden numerona 0.0-1.0 sille, onko mallille syötetty sähköposti roskapostia vai ei. Jos todennäköisyys on yli tietyn kynnyksen (esim. 0.8), sähköposti luokitellaan roskapostiksi. Kynnyksen asettaminen on ihmisen tehtävä. Asettamalla kynnys liian matalalle, saattaa roskaposti päästä läpi ja asettamalla liian korkealle, alkaa oikeita sähköposteja päätyä roskapostiksi. Ei ole olemassa oikeaa kynnysarvoa, vaan se riippuu käyttötarkoituksesta ja riskinsietokyvystä.
+Käytännössä tällainen malli antaa todennäköisyyden numerona 0.0-1.0 sille, onko mallille syötetty sähköposti roskapostia vai ei. Jos todennäköisyys on yli tietyn kynnyksen (esim. 0.8), sähköposti luokitellaan roskapostiksi. Kynnyksen asettaminen on ihmisen tehtävä. Asettamalla kynnys liian matalalle saattaa roskaposti päästä läpi, ja asettamalla liian korkealle alkaa oikeita sähköposteja päätyä roskapostiksi. Ei ole olemassa oikeaa kynnysarvoa, vaan se riippuu käyttötarkoituksesta ja riskinsietokyvystä.
 
 Koska tämä on tilastollinen malli, se ei ole täydellinen. Se tekee virheitä, ja sen suorituskyky riippuu suuresti siitä, kuinka hyvä data on, jolla se on koulutettu. Tässä alalajissa on ilmeisintä, että AI ei "ajattele" tai "ymmärrä" ihmisen tavoin. Se ei tee päätöksiä tai arvioi tilanteita inhimillisesti, vaan se vain laskee todennäköisyyksiä perustuen aiempaan dataan. Jos roskapostin piirteet muuttuvat (kuten usein tapahtuu), malli alkaa tehdä enemmän virheitä, ellei sitä päivitetä uudella datalla.
 
@@ -38,7 +38,7 @@ Rajanveto edellisen koneoppimisen ja syväoppimisen välillä ei ole aina selke�
 
 Hyvä esimerkki vahvistusoppimisesta on seuraava video, jossa tietokone oppii pelaamaan Trackmania-ajopeliä yrittämällä uudelleen ja uudelleen <https://www.youtube.com/watch?v=Dw3BZ6O_8LY>
 
-Ihminen, kouluttaja, antaa ohjelmalle palkkion tai rangaistuksen sen perusteella, miten hyvin se suoriutuu tehtävästä. Ohjelma oppii strategioita, jotka maksimoivat palkkiot pitkällä aikavälillä. Heikkous on siinä, että palkkiot ohjaavat oppimista, ja väärin asetetut palkkiot voivat johtaa odottamattomiin tai ei-toivottuihin tuloksiin. Vahvistusoppiminen on esimerkki "sitä saat mitä tilaat" -periaatteesta. Ohjelma tekee kaikkensa mennäkseen kohti palkintoa, usein löytäen luovia tai odottamattomia tapoja saavuttaa tavoitteensa, mutta myös saattaa jättää huomiotta muita tärkeitä näkökohtia, jos ne eivät liity suoraan palkkioon.
+Ihminen, kouluttaja, antaa ohjelmalle palkkion tai rangaistuksen sen perusteella, miten hyvin se suoriutuu tehtävästä. Ohjelma oppii strategioita, jotka maksimoivat palkkiot pitkällä aikavälillä. Heikkous on siinä, että palkkiot ohjaavat oppimista, ja väärin asetetut palkkiot voivat johtaa odottamattomiin tai ei-toivottuihin tuloksiin. Vahvistusoppiminen on esimerkki "sitä saat mitä tilaat" -periaatteesta. Ohjelma tekee kaikkensa mennäkseen kohti palkintoa, usein löytäen luovia tai odottamattomia tapoja saavuttaa tavoitteensa, mutta se saattaa myös jättää huomiotta muita tärkeitä näkökohtia, jos ne eivät liity suoraan palkkioon.
 
 Edelleen, tämäkään AI:n muoto ei "ajattele" tai "ymmärrä" ihmisen tavoin - puhdas vahvistusoppiminen ei pysähdy "miettimään" tekojaan tai motiivejaan - se vain optimoi palkkioita. Vahvistusoppiminen on tavallaan myös tehotonta, koska ohjelman on kokeiltava monia erilaisia strategioita oppiakseen, mikä voi vaatia paljon aikaa ja resursseja. Toisaalta ohjelman voi vain jättää pyörimään ja lopulta se saattaa suorittaa tiettyä tehtävää paremmin ja tasalaatuisemmin kuin ihminen.
 
@@ -58,7 +58,7 @@ Kirjoittamisen helpottamiseksi tässä materiaalissa "AI" viittaa aina generatii
 
 Lyhenteellä LLM tarkoitetaan koulutettua suurta kielimallia, joka osaa tuottaa tiettyä luonnollista kieltä. Yksi kielimalli osaa useita kieliä ja voi ymmärtää ja tuottaa tekstiä eri aiheista. Juuri tämän takia se on Suuri isolla S-kirjaimella. Suuruus tulee siitä, että koulutusdatana on lähes loputon määrä kirjoja, koko Wikipedia, miljardeja nettisivuja ja niin edelleen. Tästä kaikesta tekstimassasta voidaan luoda todennäköisyyksiin perustuva malli, joka osaa valita seuraavan sanan siten, että lause vaikuttaa järkevältä.
 
-Suuret kielimallit, kuten OpenAI:n GPT-mallit tai Google Gemini, ovat vain malleja, niitä ei voi käyttää sellaisenaan mitenkään. Käyttääksemme niitä, tarvitsemme jonkin paketoinnin. Tyypillisesti niitä tarjotaan käyttäjille joko ohjelmointirajapintana (API) tai valmiina sovelluksina, kuten ChatGPT.
+Suuret kielimallit, kuten OpenAI:n GPT-mallit tai Google Gemini, ovat vain malleja; niitä ei voi käyttää sellaisenaan mitenkään. Käyttääksemme niitä tarvitsemme jonkin paketoinnin. Tyypillisesti niitä tarjotaan käyttäjille joko ohjelmointirajapintana (API) tai valmiina sovelluksina, kuten ChatGPT.
 
 ### Palvelut kuten ChatGPT
 
@@ -76,7 +76,7 @@ LLM on siis teknologia, kun taas ChatGPT tai Copilot on sovellus, joka hyödynt�
 
 LLM-malleja ja niiden päälle rakennettuja palveluita on nykyään paljon erilaisia. Joitakin muita tunnetuimpia malleja ovat Google Gemini, Anthropic Claude, Grok, DeepSeek ja Meta Llama. Näistä Meta Llama on poikkeavasti puhdas malli, jota jaellaan ladattavana ja ajettavaksi omalla tietokoneella. Sitä ei siis voi käyttää palveluna. On toki olemassa kolmansia osapuolia, jotka tarjoavat sitä käytettäväksi, mutta Meta itsessään ei tuota sitä palveluna.
 
-Jokaisella mallilla on omat vahvuutensa ja heikkoutensa, mutta yleisesti ottaen ne toimivat samalla periaatteella: ne ennustavat seuraavia sanoja (tai oikeammin sanan osia, tokeneita) perustuen valtavaan määrään tekstiä, jolla ne on koulutettu. Koulutuksen tyyli, datan laatu ja määrä, sekä mallin arkkitehtuuri vaikuttavat kaikki siihen, miten hyvin malli suoriutuu eri tehtävissä.
+Jokaisella mallilla on omat vahvuutensa ja heikkoutensa, mutta yleisesti ottaen ne toimivat samalla periaatteella: ne ennustavat seuraavia sanoja (tai oikeammin sanan osia, tokeneita) perustuen valtavaan määrään tekstiä, jolla ne on koulutettu. Koulutuksen tyyli, datan laatu ja määrä sekä mallin arkkitehtuuri vaikuttavat kaikki siihen, miten hyvin malli suoriutuu eri tehtävissä.
 
 Mallien vertailu on hyvin haastavaa, lähes mahdotonta. On toki olemassa useita projekteja, jotka yrittävät vertailla malleja systemaattisesti, mutta ne kaikki kohtaavat saman ongelman: vaikka malli A suoriutuu paremmin tietyissä testeissä, malli B saattaa olla parempi toisissa tilanteissa. On mahdotonta tietää, onko tilanteesi juuri sellainen, että malli A tai B olisi siihen parempi.
 
@@ -88,7 +88,7 @@ Usein kannattaa vain aloittaa jollakin tunnetulla mallilla, kuten ChatGPT:llä t
 
 Lisäksi on tärkeää ymmärtää, että LLM-mallit ovat epädeterministisiä. Tämä tarkoittaa sitä, että sama syöte (prompti) voi tuottaa eri vastauksia eri kerroilla, vaikka käyttäisit samaa mallia ja samoja asetuksia. Tämä johtuu siitä, että mallit käyttävät satunnaisuutta valitessaan seuraavia tokeneita, mikä auttaa luomaan monipuolisempia ja luovempia vastauksia. Tämä epädeterminismi voi olla sekä etu että haitta. Toisaalta se mahdollistaa luovemmat ja monipuolisemmat vastaukset, mutta toisaalta se tekee mallin käyttäytymisen ennustamisesta haastavampaa.
 
-Epädeterminismin määrää on mahdollista säätää lämpötilalla (temperature) - tämä on arvo nollan ja yhden välillä, joka vaikuttaa siihen kuinka "satunnaisesti" malli valitsee seuraavia tokeneita. Matala lämpötila (lähellä nollaa) saa mallin tuottamaan konservatiivisempia ja ennustettavampia vastauksia, kun taas korkea lämpötila (lähellä yhtä) johtaa luovempiin ja monipuolisempiin vastauksiin. Useimmissa sovelluksissa, kuten ChatGPT:ssä, lämpötila on asetettu johonkin keskivaiheille, jotta saadaan hyvä tasapaino ennustettavuuden ja luovuuden välillä. Sovelluksissa lämpötilaa ei yleensä voi säätää käyttäjän toimesta, mutta API-rajapinnoissa tämä on usein mahdollista.
+Epädeterminismin määrää on mahdollista säätää lämpötilalla (temperature) - tämä on arvo nollan ja yhden välillä, joka vaikuttaa siihen, kuinka "satunnaisesti" malli valitsee seuraavia tokeneita. Matala lämpötila (lähellä nollaa) saa mallin tuottamaan konservatiivisempia ja ennustettavampia vastauksia, kun taas korkea lämpötila (lähellä yhtä) johtaa luovempiin ja monipuolisempiin vastauksiin. Useimmissa sovelluksissa, kuten ChatGPT:ssä, lämpötila on asetettu johonkin keskivaiheille, jotta saadaan hyvä tasapaino ennustettavuuden ja luovuuden välillä. Sovelluksissa lämpötilaa ei yleensä voi säätää käyttäjän toimesta, mutta API-rajapinnoissa tämä on usein mahdollista.
 
 ### Hallusinointi
 
@@ -110,7 +110,7 @@ Edellä sivuttiin jo promptaamista, eli kehotteiden kirjoittamista LLM:lle. Täm
 
 Lisäksi on tärkeää ymmärtää kontekstin merkitys. LLM:t käyttävät syötteenä annettua tekstiä, kontekstia, vastauksensa tuottamiseen. Mitä enemmän relevanttia kontekstia annat, sitä parempia vastauksia malli yleensä tuottaa. Tämä voi tarkoittaa keskusteluhistorian sisällyttämistä, aiempien viestien muistamista tai lisätietojen antamista aiheesta.
 
-Eli sen sijaan, että kysyisit pelkän kysymyksen "Mikä on React?", voit antaa mallille enemmän kontekstia, kuten "Olen aloittelija web-kehityksessä ja haluan oppia Reactista. Voisitko selittää, mikä React on ja miksi sitä käytetään jos tunnen jo HTML:n ja JavaScriptin perusteet?". Vielä parempi on antaa kontekstiksi vaikka Reactin virallinen dokumentaatio ja pyytää mallia vastaamaan pelkästään sen perusteella. Tällä tavalla malli ei luultavasti "arvaile" vastauksiaan, vaan perustaa ne annettuun tietoon. Johtuen mallin epädeterministisestä luonteesta, tämäkään ei kuitenkaan takaa täydellistä tarkkuutta.
+Eli sen sijaan, että kysyisit pelkän kysymyksen "Mikä on React?", voit antaa mallille enemmän kontekstia, kuten "Olen aloittelija web-kehityksessä ja haluan oppia Reactista. Voisitko selittää, mikä React on ja miksi sitä käytetään, jos tunnen jo HTML:n ja JavaScriptin perusteet?". Vielä parempi on antaa kontekstiksi vaikka Reactin virallinen dokumentaatio ja pyytää mallia vastaamaan pelkästään sen perusteella. Tällä tavalla malli ei luultavasti "arvaile" vastauksiaan, vaan perustaa ne annettuun tietoon. Johtuen mallin epädeterministisestä luonteesta, tämäkään ei kuitenkaan takaa täydellistä tarkkuutta.
 
 System promptit ovat erityisiä järjestelmäkehotteita, jotka määrittelevät mallin käyttäytymisen koko keskustelun ajan. Ne asetetaan keskustelun alussa ja ohjaavat mallin toimintaa, kuten roolia, tyyliä tai muita käyttäytymispiirteitä. Esimerkiksi voit asettaa system promptin, joka kertoo mallille toimia kokeneena ohjelmistokehittäjänä tai koodikatselmoijana. Tämä auttaa varmistamaan, että malli vastaa kysymyksiisi halutulla tavalla koko keskustelun ajan.
 
@@ -144,7 +144,7 @@ Jos haluat nopean yleiskuvan policyjen sisällöstä, sanon sen tiiviisti.
 
 ```text
 Tiiviisti:
-OpenAI:n policyt ovat joukko toimintaperiaatteita, jotka määrittävät:
+OpenAI:n policyt ovat joukko toimintaperiaatteita, jotka määritteävät:
 
 - mitä malli saa ja ei saa tuottaa
 - miten malli käsittelee arkaluonteista sisältöä
@@ -164,7 +164,7 @@ Näitä periaatteita sovelletaan aina, riippumatta käyttäjän tai system promp
 
 ### Lähdeviitteet
 
-LLM:t eivät voi tarjota lähdeviitteitä vastauksilleen, koska ne tuottavat tekstiä perustuen tilastollisiin malleihin eikä niillä ole suoraa pääsyä tietokantoihin tai lähteisiin. Johtuen siitä, että mallit on koulutettu valtavilla tekstimassoilla, ne voivat väittää muistavansa tiettyjä lähteitä tai tietoja, mutta tämä ei ole luotettava tapa saada lähdeviitteitä. Ei siis ole teknisesti mahdollista pyytää LLM:ää tarjoamaan lähdeviitteitä, ellei se ole erikseen ohjelmoitu tekemään niin.
+LLM:t eivät voi tarjota lähdeviitteitä vastauksilleen, koska ne tuottavat tekstiä perustuen tilastollisiin malleihin eikä niillä ole suoraa pääsyä tietokantoihin tai lähteisiin. Johtuen siitä, että mallit on koulutettu valtavilla tekstimassoilla, ne voivat väittää muistavansa tiettyjä lähteitä tai tietoja, mutta tämä ei ole luotettava tapa saada lähdeviitteitä. Ei siis ole teknisesti mahdollista pyytää LLM:ää tarjoamaan lähdeviitteitä, ellei sitä ole erikseen ohjelmoitu tekemään niin.
 
 Jotkut LLM-palvelut, kuten ChatGPT, voivat tarjota lähdeviitteitä, jos ne on integroitu hakukoneisiin tai tietokantoihin, jotka mahdollistavat reaaliaikaisen tiedon haun. Tällöin malli voi hakea tietoa verkosta ja tarjota lähteitä vastauksilleen. Tämä kuitenkin vaatii erillisen ohjelmoinnin, eikä ole osa perus LLM:n toimintaa.
 
@@ -174,7 +174,7 @@ Malleja ajetaan valtavasti sähköä kuluttavilla palvelimilla. Jokainen API-kut
 
 Palvelimet ovat rajallinen resurssi: yksi palvelin voi käsitellä vain tietyn määrän pyyntöjä sekunnissa. Palvelimia ei kuitenkaan voi lisätä käytön mukaan rajattomasti, koska se olisi fyysisesti mahdotonta ja erittäin kallista. Vaikka jokainen käyttäjä maksaisi täyden hinnan, palvelimia ei silti voi lisätä kuorman mukaan rajattomasti. Tämä tarkoittaa sitä, että palveluntarjoajat joutuvat tekemään kompromisseja mallien suorituskyvyn, vasteajan ja kustannusten välillä. Tämän takia mallit eivät aina toimi optimaalisesti, varsinkaan ruuhka-aikoina. Olet ehkä huomannut, että ChatGPT on tyhmä kuin saapas joinakin aikoina, mutta taas toisina hetkinä se toimii loistavasti. Sama pätee muihinkin LLM-palveluihin.
 
-Malleille luontaisen epädeterministisuuden lisäksi tämä fyysisen maailman resurssirajoitus tekee mallien käyttäytymisestä entistä arvaamattomampaa. Joskus malli saattaa vastata nopeasti ja tarkasti, kun taas toisinaan se saattaa olla hidas tai antaa epätarkkoja vastauksia, riippuen palvelinten kuormituksesta ja käytettävissä olevista resursseista. Kun kello on Suomessa kolme iltapäivällä, alkaa Yhdysvalloissa olla aamu, jolloin monet käyttäjät aloittavat työpäivänsä ja alkavat käyttää LLM-palveluita. Tällöin palvelimet ruuhkautuvat, mikä vaikuttaa mallien suorituskykyyn. Toinen vaihtoehto ruuhkautumiselle olisi hinnankorotus, jolloin ainoastaan varakkaammat käyttäjät pystyisivät käyttämään palvelua ruuhka-aikoina. Tämä ei ole toivottavaa kenellekkään, joten palvelut hiljaisesti vähentävät tarkkuutta ruuhka-aikoina.
+Malleille luontaisen epädeterministisuuden lisäksi tämä fyysisen maailman resurssirajoitus tekee mallien käyttäytymisestä entistä arvaamattomampaa. Joskus malli saattaa vastata nopeasti ja tarkasti, kun taas toisinaan se saattaa olla hidas tai antaa epätarkkoja vastauksia, riippuen palvelinten kuormituksesta ja käytettävissä olevista resursseista. Kun kello on Suomessa kolme iltapäivällä, alkaa Yhdysvalloissa olla aamu, jolloin monet käyttäjät aloittavat työpäivänsä ja alkavat käyttää LLM-palveluita. Tällöin palvelimet ruuhkautuvat, mikä vaikuttaa mallien suorituskykyyn. Toinen vaihtoehto ruuhkautumiselle olisi hinnankorotus, jolloin ainoastaan varakkaammat käyttäjät pystyisivät käyttämään palvelua ruuhka-aikoina. Tämä ei ole toivottavaa kenellekään, joten palvelut hiljaisesti vähentävät tarkkuutta ruuhka-aikoina.
 
 Usein onkin parempi vain valita malli ja palvelu, joka on riittävän hyvä useimpiin käyttötapauksiin, sen sijaan että yrittäisi löytää "parasta" mallia, joka saattaa olla epävakaa tai kallis käyttää. Vaikka palvelu A olisi parempi kuin B nyt, saattaa se muuttua hetkessä huonommaksi.
 
@@ -182,7 +182,7 @@ Usein onkin parempi vain valita malli ja palvelu, joka on riittävän hyvä usei
 
 Kun uusi malli julkaistaan, se ei välttämättä ole parempi kuin vanha malli kaikissa tilanteissa. Markkinointi ja hype saa usein ihmiset uskomaan, että uusin malli on aina paras, mutta todellisuudessa vanhemmat mallit voivat olla edelleen parempia tietyissä käyttötapauksissa.
 
-Koska malleja ei käytetä suoraan, vaan niiden päälle rakennettuja palveluita, voi uudessa versiossa olla myös uusia rajoituksia tai muutoksia, jotka vaikuttavat siihen, miten malli toimii käytännössä. Esimerkiksi palvelu saattaa optimoida mallin tomintaa siten, että se toimii nopeammin (ja on täten halvempaa tuottaa), vaikka tämä heikentää sen kykyä käsitellä monimutkaisia kysymyksiä tai tuottaa syvällisiä vastauksia.
+Koska malleja ei käytetä suoraan, vaan niiden päälle rakennettuja palveluita, voi uudessa versiossa olla myös uusia rajoituksia tai muutoksia, jotka vaikuttavat siihen, miten malli toimii käytännössä. Esimerkiksi palvelu saattaa optimoida mallin toimintaa siten, että se toimii nopeammin (ja on täten halvempaa tuottaa), vaikka tämä heikentää sen kykyä käsitellä monimutkaisia kysymyksiä tai tuottaa syvällisiä vastauksia.
 
 Uusien mallien hinnoittelu on usein myös korkeampaa, mikä voi olla merkittävä tekijä valittaessa mallia käytettäväksi.
 
@@ -208,35 +208,35 @@ Koodaaminenhan on todella helppoa, mutta se, mitä pitää koodata, onkin paljon
 
 AI:n käyttö ohjelmistokehityksessä johtaa välttämättä laiskuuteen, jossa kehittäjät luottavat liikaa AI:n tuottamaan koodiin ilman riittävää tarkastelua tai ymmärrystä. On kuitenkin olemassa "taktista laiskuutta", joka on oikein käytettynä hyvä asia. AI:n käyttö poistaa usein "tyhjän paperin ongelman", jolloin on jokin lähtökohta, josta lähteä liikkeelle.
 
-Joskus koodin tyylillä tai tietoturvalla ei olekkaan mitään väliä, esimerkiksi prototyypin tai kokeiluprojektin kohdalla. Tällöin AI:n tuottama koodi voi olla täysin riittävä, vaikka se ei olisikaan täydellistä. Tärkeämpää on saada jotain toimivaa nopeasti, jotta voidaan testata ideoita ja konsepteja. Tästä päästään takaisin kommunikointiin ja yhteistyöhön: AI:n avulla on mahdollista tehdä nopeasti prototyyppejä, joita voidaan sitten yhdessä tiimin kanssa arvioida ja parantaa.
+Joskus koodin tyylillä tai tietoturvalla ei olekaan mitään väliä, esimerkiksi prototyypin tai kokeiluprojektin kohdalla. Tällöin AI:n tuottama koodi voi olla täysin riittävä, vaikka se ei olisikaan täydellistä. Tärkeämpää on saada jotain toimivaa nopeasti, jotta voidaan testata ideoita ja konsepteja. Tästä päästään takaisin kommunikointiin ja yhteistyöhön: AI:n avulla on mahdollista tehdä nopeasti prototyyppejä, joita voidaan sitten yhdessä tiimin kanssa arvioida ja parantaa.
 
 Haastavaksi kuitenkin muodostuu tilanne, jossa AI tuottaa koodia, jota kehittäjät eivät täysin ymmärrä tai osaa ylläpitää. Tämä on luultavasti pysyvä ongelma, joka pahenee ajan myötä, kun AI:n tuottamaa koodia on yhä enemmän ja enemmän ohjelmistoprojekteissa. Toisaalta aikoinaan luotiin paljon vaikka COBOL-koodia, jota juuri kukaan ei ymmärrä enää tänä päivänä. Jotenkin ihmiset ovat selvinneet siitäkin.
 
 ### Vibe-koodaus
 
-Viimeaikoina on puhuttu paljon "vibe-koodauksesta", jossa kehittäjät tai ihmiset jotka eivät lähtökohtaisesti edes halua osata ohjelmoida, käyttävät AI:ta tuottamaan ohjelman, ilman minkäänlaista ymmärrystä siitä, miten koodi toimii tai miksi se on kirjoitettu tietyllä tavalla.
+Viimeaikoina on puhuttu paljon "vibe-koodauksesta", jossa kehittäjät tai ihmiset, jotka eivät lähtökohtaisesti edes halua osata ohjelmoida, käyttävät AI:ta tuottamaan ohjelman ilman minkäänlaista ymmärrystä siitä, miten koodi toimii tai miksi se on kirjoitettu tietyllä tavalla.
 
 Mikäli tarkoituksena on tehdä kokeiluja tai prototyyppejä, tämä on erittäin hyvä tapa toimia. Ongelmaksi muodostuu kuitenkin tilanne, jossa tällainen vibe-koodaus johtaa tuotantokoodiin, jota kukaan ei ymmärrä tai osaa ylläpitää. Tämä on erityisen riskialtista suurissa projekteissa, joissa koodin laatu, ylläpidettävyys ja turvallisuus ovat kriittisiä tekijöitä.
 
 ### Agentit
 
-Agentilla tarkoitetaan itseäisesti toimivaa AI-järjestelmää, joka suorittaa annetun tehtävän itsenäisesti loppuun asti. Esimerkkinä voisi olla agentti, joka etsii tietoa verkosta, kirjoittaa koodia, testaa sitä ja dokumentoi sen ilman ihmisen väliintuloa.
+Agentilla tarkoitetaan itsenäisesti toimivaa AI-järjestelmää, joka suorittaa annetun tehtävän itsenäisesti loppuun asti. Esimerkkinä voisi olla agentti, joka etsii tietoa verkosta, kirjoittaa koodia, testaa sitä ja dokumentoi sen ilman ihmisen väliintuloa.
 
-Konkreettisesti Agenttinen AI tarkoittaa sitä, että on olemassa jokin koodi, joka tekee yksittäisiä kutsuja LLM:lle ja LLM palauttaa vastauksenaan seuraavan toimenpiteen, jonka koodi suorittaa. Tämän jälkeen koodi tekee uuden kutsun LLM:lle, joka palauttaa seuraavan toimenpiteen, ja niin edelleen, kunnes tehtävä on suoritettu loppuun. Tämä on siis eräänlainen silmukka, jossa AI ohjaa toimintaansa itse.
+Konkreettisesti agenttinen AI tarkoittaa sitä, että on olemassa jokin koodi, joka tekee yksittäisiä kutsuja LLM:lle ja LLM palauttaa vastauksenaan seuraavan toimenpiteen, jonka koodi suorittaa. Tämän jälkeen koodi tekee uuden kutsun LLM:lle, joka palauttaa seuraavan toimenpiteen, ja niin edelleen, kunnes tehtävä on suoritettu loppuun. Tämä on siis eräänlainen silmukka, jossa AI ohjaa toimintaansa itse.
 
 Agentteja voi olla useita, jolloin ne voivat kommunikoida keskenään ja jakaa tietoa. Tämä mahdollistaa monimutkaisempien tehtävien suorittamisen, joissa tarvitaan useita eri vaiheita tai eri osaamisalueita.
 
-Visual Studio Coden Copilotissa on Agent-tila, jossa Copilot luo tiedostoja ja jopa suorittaa koodia käyttäjän puolesta. Etuna on se, että käyttäjän ei tarvitse kokeilla copilotin koodia ja antaa sitten palautetta, vaan Copilot tekee kaiken itse.
+Visual Studio Coden Copilotissa on Agent-tila, jossa Copilot luo tiedostoja ja jopa suorittaa koodia käyttäjän puolesta. Etuna on se, että käyttäjän ei tarvitse kokeilla Copilotin koodia ja antaa sitten palautetta, vaan Copilot tekee kaiken itse.
 
 ### Luotettavuus, eettisyys ja tietoturva
 
-Ohjelmistokehittäjien on siis varmistettava, että heidän luomansa järjestelmät - vibe-koodaamaalla tai ei - ovat luotettavia ja turvallisia. AI voi tuottaa koodia, joka näyttää toimivalta, mutta sisältää piileviä virheitä tai turvallisuusriskejä. Ideaalitilanteessa ohjelmistokehittäjä ymmärtää jokaisen rivin koodia, mutta epäilen, onko tämä enää realistista AI:n aikakaudella.
+Ohjelmistokehittäjien on siis varmistettava, että heidän luomansa järjestelmät - vibe-koodaamalla tai ei - ovat luotettavia ja turvallisia. AI voi tuottaa koodia, joka näyttää toimivalta, mutta sisältää piileviä virheitä tai turvallisuusriskejä. Ideaalitilanteessa ohjelmistokehittäjä ymmärtää jokaisen rivin koodia, mutta epäilen, onko tämä enää realistista AI:n aikakaudella.
 
 Toisaalta aikaisemminkin tiimissä on ollut jäseniä, jotka eivät ole ymmärtäneet kaikkea koodia, mutta tiimin muut jäsenet ovat ehkä ymmärtäneet. AI:n generoima koodi ei juurikaan poikkea siitä, että koodi olisi copy-pastettu jostain internetistä ilman ymmärrystä siitä, miten se toimii. Hauskasti AI:n generoima koodi luultavasti perustuu juuri tällaiseen julkisesti saatavilla olevaan koodiin.
 
 Eettisesti AI saattaa myös tuottaa koodia, joka loukkaa yksityisyyttä, syrjii tiettyjä käyttäjäryhmiä tai rikkoo muita eettisiä periaatteita. Tämäkään ei tietyllä tavalla poikkea ennen AI:n aikakautta tapahtuneesta, mutta AI:n tuottaman koodin määrä ja nopeus voivat pahentaa näitä ongelmia.
 
-Lisäksi ohjelmakoodin tai projektin mukana on usein tiedostoja, joissa on liikesalaisuuksia. Käytettäessä AI:ta koodin generointiin, on tärkeää varmistaa, että nämä tiedot eivät vuoda ulkopuolisille. Monet AI-palvelut tallentavat käyttäjien syötteitä ja käyttävät niitä mallin jatkokoulutukseen, mikä voi johtaa arkaluonteisten tietojen vuotamiseen. Ohjelmistokehittäjien on oltava tietoisia tästä riskistä ja varmistettava, että he noudattavat organisaationsa tietoturvapolitiikkaa.
+Lisäksi ohjelmakoodin tai projektin mukana on usein tiedostoja, joissa on liikesalaisuuksia. Käytettäessä AI:ta koodin generointiin on tärkeää varmistaa, että nämä tiedot eivät vuoda ulkopuolisille. Monet AI-palvelut tallentavat käyttäjien syötteitä ja käyttävät niitä mallin jatkokoulutukseen, mikä voi johtaa arkaluonteisten tietojen vuotamiseen. Ohjelmistokehittäjien on oltava tietoisia tästä riskistä ja varmistettava, että he noudattavat organisaationsa tietoturvapolitiikkaa.
 
 ### Pilotti ja Co-pilotti
 
@@ -248,11 +248,11 @@ Vibe-koodauksen sijaan keskitymme tässä materiaalissa AI-avusteiseen ohjelmoin
 
 ### Alku on turhauttavinta
 
-Uudessa projektissa AI:n ehdotukset voivat olla erityisen heikkoja, koska projektissa ei vielä ole riittävästi koodirivejä, jonka tyylistä koodia AI voisi jäljitellä. AI tarvitsee kontekstia, jotta se osaa tuottaa sopivaa koodia, ja ilman tätä kontekstia se yleensä tuottaa geneeristä koodia, joka ei sovi projektin tyyliin tai arkkitehtuuriin.
+Uudessa projektissa AI:n ehdotukset voivat olla erityisen heikkoja, koska projektissa ei vielä ole riittävästi koodirivejä, joiden tyylistä koodia AI voisi jäljitellä. AI tarvitsee kontekstia, jotta se osaa tuottaa sopivaa koodia, ja ilman tätä kontekstia se yleensä tuottaa geneeristä koodia, joka ei sovi projektin tyyliin tai arkkitehtuuriin.
 
 Mitä pidemmälle projekti etenee, sitä parempia AI:n ehdotukset yleensä ovat. Tämä kuitenkin vaatii aikaa ja vaivaa, ja alkuvaiheessa kehittäjien on usein tehtävä enemmän manuaalista työtä AI:n tuottaman koodin kanssa.
 
-Tätä voidaan helpottaa antamalla AI:lle enemmän kontekstia projektista esim. kirjoittamalla dokumentaatiota siitä mitä projekti tekee ja miten se sen tekee. Tätä dokumentaatiota on luonnollisesti kätevää myös kirjoittaa AI:n avulla. Mitä enemmän AI ymmärtää projektin tarkoitusta, arkkitehtuuria ja tyyliä, sitä parempia ehdotuksia se pystyy tekemään.
+Tätä voidaan helpottaa antamalla AI:lle enemmän kontekstia projektista esim. kirjoittamalla dokumentaatiota siitä, mitä projekti tekee ja miten se sen tekee. Tätä dokumentaatiota on luonnollisesti kätevää myös kirjoittaa AI:n avulla. Mitä enemmän AI ymmärtää projektin tarkoitusta, arkkitehtuuria ja tyyliä, sitä parempia ehdotuksia se pystyy tekemään.
 
 ### Monen aikakauden tietoa
 
@@ -284,19 +284,19 @@ Myös kirjastot ja frameworkit kehittyvät nopeasti, ja AI helposti suosii vanhe
 
 AI-malleilla ei ole minkäänlaista käsitystä ajasta. AI:lla ei ole kiire tai aikatauluja, eikä se ymmärrä projektin määräaikoja tai tärkeyttä. Tämä johtaa tilanteisiin, joissa AI tuottaa koodia, joka on teknisesti toimivaa, mutta ei sovi projektin aikatauluun tai budjettiin. Koska AI ei kyllästy tai tunne painetta, se ei osaa priorisoida tehtäviä samalla tavalla kuin ihminen.
 
-Lisäksi AI ei ymmärrä ohjelmistokehityksen elinkaarta tai sitä, miten koodi tulee ylläpitää ja päivittää ajan myötä. Se ei osaa ennakoida tulevia tarpeita tai muutoksia, se elää vain nykyhetkessä ja suorittaa tehtävänsä tässä hetkessä.
+Lisäksi AI ei ymmärrä ohjelmistokehityksen elinkaarta tai sitä, miten koodi tulee ylläpitää ja päivittää ajan myötä. Se ei osaa ennakoida tulevia tarpeita tai muutoksia; se elää vain nykyhetkessä ja suorittaa tehtävänsä tässä hetkessä.
 
 ### Tekee joskus mitä tahansa ymmärtämättä
 
-Jos pyydät AI:ta tekemään jotain, se yrittää todella tehdä sen, riippumatta siitä, onko se järkevää tai turvallista. Esimerkiksi jos projektissa on yksikkötesti, ei mene läpi, AI saattaa poistaa testin tai muuttaa testiä sen sijaan, että korjaisi koodin. Tämä on taas esimerkki siitä, miten AI ei ajattele kuten ihminen, eikä siihen pidä suhtautua kuten ihmiseen.
+Jos pyydät AI:ta tekemään jotain, se yrittää todella tehdä sen, riippumatta siitä, onko se järkevää tai turvallista. Esimerkiksi jos projektissa on yksikkötesti, joka ei mene läpi, AI saattaa poistaa testin tai muuttaa testiä sen sijaan, että korjaisi koodin. Tämä on taas esimerkki siitä, miten AI ei ajattele kuten ihminen, eikä siihen pidä suhtautua kuten ihmiseen.
 
 ### AI ei opi kuten ihminen
 
-Kun korjaat AI:n tuottamaa kooodia moittimalla sitä, AI saattaa sanoa, että ei enää jatkossa tee samaa virhettä. Todellisuudessa AI ei kuitenkaan opi mitään, vaan se tuottaa vastauksensa aina uudelleen alusta alkaen, perustuen koulutusdataansa ja syötteeseensä. Tämä tarkoittaa sitä, että AI ei muista aiempia keskusteluja tai korjauksia, ellei niitä ole sisällytetty kontekstiin johon se vastaa.
+Kun korjaat AI:n tuottamaa koodia moittimalla sitä, AI saattaa sanoa, että se ei enää jatkossa tee samaa virhettä. Todellisuudessa AI ei kuitenkaan opi mitään, vaan se tuottaa vastauksensa aina uudelleen alusta alkaen, perustuen koulutusdataansa ja syötteeseensä. Tämä tarkoittaa sitä, että AI ei muista aiempia keskusteluja tai korjauksia, ellei niitä ole sisällytetty kontekstiin, johon se vastaa.
 
 Jotta AI oppisi pysyvästi, olisi tarpeen luoda uusi malli, joka on koulutettu uudelleen sisältämään nämä korjaukset. Tähän normaalilla käyttäjällä ei ole käytännössä mahdollisuutta, joten ainoa tapa "opettaa" AI:ta on antaa sille riittävästi kontekstia jokaisessa vuorovaikutuksessa.
 
-Työkaluissa, kuten Visual Studio Coden Copilotissa on mahdollisuus asettaa sääntöjä, jotka laitetaan aina promptin mukana system promptin tavoin. Ongelmaksi muodostuu kuitenkin se, että kun sääntöjen määrä kasvaa, AI:n on valikoitava, mitä sääntöjä se noudattaa, koska se ei pysty käsittelemään loputonta määrää sääntöjä kerralla.
+Työkaluissa, kuten Visual Studio Coden Copilotissa, on mahdollisuus asettaa sääntöjä, jotka laitetaan aina promptin mukana system promptin tavoin. Ongelmaksi muodostuu kuitenkin se, että kun sääntöjen määrä kasvaa, AI:n on valikoitava, mitä sääntöjä se noudattaa, koska se ei pysty käsittelemään loputonta määrää sääntöjä kerralla.
 
 ### AI ei sano "en tiedä" tai "ei kannata edes aloittaa"
 
@@ -310,11 +310,11 @@ Arvokkainta joskus olisi kuulla, että jokin idea on huono tai että sitä ei ka
 
 Internetissä AI-avusteista ohjelmoinnista esitetään paljon väitteitä, jotka eivät pidä paikkaansa. On tyypillistä, että esitetään väite tietynlaisesta tavasta promptata, joka "saa AI:n tuottamaan parempaa koodia".
 
-Esimerkiksi "Olet senior-tason ohjelmistokehittäjä, joka hallitsee JavaScriptin täysin. Kirjoita koodi parhaiden käytäntöjen mukaisesti..." -tyyppiset promptit ovat yleisiä. Ikäänkuin AI alkaisi yhtäkkiä tuottamaan parempaa koodia, kun sille kerrotaan, että se on kokenut kehittäjä.
+Esimerkiksi "Olet senior-tason ohjelmistokehittäjä, joka hallitsee JavaScriptin täysin. Kirjoita koodi parhaiden käytäntöjen mukaisesti..." -tyyppiset promptit ovat yleisiä. Ikään kuin AI alkaisi yhtäkkiä tuottamaan parempaa koodia, kun sille kerrotaan, että se on kokenut kehittäjä.
 
-Ainoa, joka edes vähän toimii on:
+Ainoa, joka edes vähän toimii, on:
 
-*Olet junior-tason ohjelmistokehittäjä. Kirjoita javascript-funktio joka on tyypillisen juniorin kehittämä ja saa seniorin voimaan pahoin*
+*Olet junior-tason ohjelmistokehittäjä. Kirjoita javascript-funktio, joka on tyypillisen juniorin kehittämä ja saa seniorin voimaan pahoin*
 
 Ja silloin saamme jotain tällaista:
 
@@ -352,7 +352,7 @@ Vielä jos koodissa olisi kaikki try-catch-lohkoissa, niin se olisi täydellinen
 
 ### AI-avusteinen ohjelmointi on kovaa työtä
 
-AI-avusteinen ohjelmointi ei ole ratkaisu, joka tekee ohjelmistokehittäjien työstä helppoa tai vaivatonta. Päinvastoin, usein se vaatii enemmän työtä, koska AI:n kanssa väittelyyn menee joskus kauemmin enemmän aikaa kuin koodin kirjoittamiseen itse.
+AI-avusteinen ohjelmointi ei ole ratkaisu, joka tekee ohjelmistokehittäjien työstä helppoa tai vaivatonta. Päinvastoin, usein se vaatii enemmän työtä, koska AI:n kanssa väittelyyn menee joskus kauemmin aikaa kuin koodin kirjoittamiseen itse.
 
 Sähköpyöräily on hyvä vertauskuva: sähköpyörä tekee ylämäkien polkemisesta helpompaa, mutta ajat kovempaa ja pidempiä matkoja, jolloin olet lopulta väsyneempi kuin ilman sähköpyörää. Toisaalta ilman sähköpyörää et ehkä edes lähtisi ajamaan.
 
@@ -364,11 +364,11 @@ Ilman AI-apua ohjelmointi saattaisi välillä olla jopa mielekkäämpää. Oleel
 
 Visual Studio Copilot on yksi suosituimmista AI-avusteisen ohjelmoinnin työkaluista. Se integroituu suoraan Visual Studio Code -editoriin ja tarjoaa reaaliaikaisia koodiehdotuksia ja automaattista täydennystä käyttäjän kirjoittaessa koodia. Lisäksi se osaa toimia itsenäisesti "Agent"-tilassa.
 
-Ohjeet kaikkeen löytyy Copilotin virallisesta dokumentaatiosta <https://code.visualstudio.com/docs/copilot/overview>, mutta tässä on lyhyt opas Copilotin peruskäyttöön.
+Ohjeet kaikkeen löytyvät Copilotin virallisesta dokumentaatiosta <https://code.visualstudio.com/docs/copilot/overview>, mutta tässä on lyhyt opas Copilotin peruskäyttöön.
 
 ### Asennus
 
-Copilot tulee oletuksena mukana Visual Studio Codessa.
+Copilot tulee oletuksena mukana Visual Studio Code:ssa.
 
 ### Kirjautuminen
 
@@ -384,7 +384,7 @@ Jos Copilot ei näy, etsi se Visual Studio Coden oikeasta yläkulmasta (@fig:1-c
 
 ### Kokeillaan Copilotia
 
-Luodaan uusi tiedosto summa.js (@fig:2-newfile) jolla kokeillaan Copilotin toimintaa.
+Luodaan uusi tiedosto summa.js (@fig:2-newfile), jolla kokeillaan Copilotin toimintaa.
 
 ![Uusi tiedosto](images/copilot/2-newfile.png){#fig:2-newfile}
 
@@ -398,7 +398,7 @@ Nyt tiedosto on luotu ja Copilot on valmis auttamaan oikealla (@fig:4-auki).
 
 ### Copilotin toimintatilat
 
-Copilotissa on kaksi pääasiallista toimintatilaa: Ask ja Agent. Vaihdetaan tila nyt "Ask"-tilaan jossa voimme esittää kysymyksiä (@fig:5-vaihda-tila).
+Copilotissa on kaksi pääasiallista toimintatilaa: Ask ja Agent. Vaihdetaan tila nyt "Ask"-tilaan, jossa voimme esittää kysymyksiä (@fig:5-vaihda-tila).
 
 ![Copilotin tilaa voi vaihtaa täältä](images/copilot/5-vaihda-tila.png){#fig:5-vaihda-tila}
 
@@ -408,13 +408,13 @@ Vaihda tila "Ask"-tilaan (@fig:6-ask).
 
 ### Käytettävä malli
 
-Kannattaa vaihtaa käytettäväksi malliksi "auto" jolloin Copilot valitsee mallin (@fig:7-malli). Muita malleja saa käyttöön maksamalla erikseen.
+Kannattaa vaihtaa käytettäväksi malliksi "auto", jolloin Copilot valitsee mallin (@fig:7-malli). Muita malleja saa käyttöön maksamalla erikseen.
 
 ![Valitse auto-malli](images/copilot/7-malli.png){#fig:7-malli}
 
 ### Kysytään Copilotilta
 
-Nyt vihdoin voimme kysyä jotain Copilotilta, huomaa kun summa.js tiedosto on auki, Copilot osaa käyttää tiedoston sisältöä kontekstina. Oletuksena avattu tiedosto on kontekstina kuten #fig:8-kysymys-kontekstilla näkyy. Voit lisätä tiedostoja kontektiksi myös itse.
+Nyt vihdoin voimme kysyä jotain Copilotilta. Huomaa, että kun summa.js-tiedosto on auki, Copilot osaa käyttää tiedoston sisältöä kontekstina. Oletuksena avattu tiedosto on kontekstina, kuten #fig:8-kysymys-kontekstilla näkyy. Voit lisätä tiedostoja kontekstiksi myös itse.
 
 Kysy Copilotilta: *miten tehdään summafunktio?*
 
@@ -428,7 +428,7 @@ Voimme jatkaa keskustelua ja pyytää toisenlaista ratkaisua (@fig:10-jatketaan)
 
 ![Jatketaan keskustelua](images/copilot/10-jatketaan.png){#fig:10-jatketaan}
 
-Kun Copilot tarjoaa ratkaisun, tietysti kopioda sen, mutta myös suoraan sijoittaa tiedostoon (@fig:11-sijoita).
+Kun Copilot tarjoaa ratkaisun, voit tietysti kopioida sen, mutta myös sijoittaa sen suoraan tiedostoon (@fig:11-sijoita).
 
 ![Sijoita Copilotin vastaus](images/copilot/11-sijoita.png){#fig:11-sijoita}
 
@@ -442,19 +442,19 @@ Sitten kokeilemme Agentti-tilaa, jossa Copilot voi itse muokata koodia puolestam
 
 ![Vaihda Agentti-tilaan](images/copilot/13-vaihda-agenttiin.png){#fig:13-vaihda-agenttiin}
 
-Ja sitten maalataan rivit joita tarkoitamme, jotta Copilot tietää mihin viittaamme ja pyydetään poistamaan kommentit (@fig:14-maalataan-rivit).
+Ja sitten maalataan rivit, joita tarkoitamme, jotta Copilot tietää, mihin viittaamme, ja pyydetään poistamaan kommentit (@fig:14-maalataan-rivit).
 
 ![Maalaa rivit](images/copilot/14-maalataan-rivit.png){#fig:14-maalataan-rivit}
 
-Copilot pyytää lupaa muokata tiedostoja kovalevyllä - kannattaa hyväksyä, vaikkakin tällöin Copilot tekee muutokset aina kysymättä mihin tahansa tiedostoon. Vaihtoehtona on, että joudut aina erikseen hyväksymään (@fig:15-lupa-muokata).
+Copilot pyytää lupaa muokata tiedostoja kovalevyllä - kannattaa hyväksyä, vaikkakin tällöin Copilot tekee muutokset aina kysymättä, mihin tahansa tiedostoon. Vaihtoehtona on, että joudut aina erikseen hyväksymään (@fig:15-lupa-muokata).
 
 ![Lupa muokata tiedostoja](images/copilot/15-lupa-muokata.png){#fig:15-lupa-muokata}
 
-Nyt Copilot on poistanut kommentit - poistuvat rivit näkyvät punaisella, hyväksy muutos (@fig:16-agentti-muokkaa)
+Nyt Copilot on poistanut kommentit - poistuvat rivit näkyvät punaisella. Hyväksy muutos (@fig:16-agentti-muokkaa)
 
 ![Copilot on poistanut kommentit](images/copilot/16-agentti-muokkaa.png){#fig:16-agentti-muokkaa}
 
-Lisää vielä funktio keskiarvo ja kokeile, että Copilot saa muokata tiedostoja ilman erillistä lupaa (@fig:17-keskiarvo).
+Lisää vielä keskiarvofunktio ja kokeile, että Copilot saa muokata tiedostoja ilman erillistä lupaa (@fig:17-keskiarvo).
 
 ![Lisää funktio keskiarvo - pitäisi tapahtua ilman kyselyjä](images/copilot/17-keskiarvo.png){#fig:17-keskiarvo}
 
@@ -486,7 +486,7 @@ Ja sitten paina enter valitaksesi "New instruction file" (@fig:22-new-instructio
 
 ![Valitse New instruction file](images/copilot/22-new-instruction-file.png){#fig:22-new-instruction-file}
 
-Sitten valitse "User Data" jotta ohjeet ovat aina käytössä riippumatta projektista (@fig:23-user-data).
+Sitten valitse "User Data", jotta ohjeet ovat aina käytössä riippumatta projektista (@fig:23-user-data).
 
 ![Valitse User Data](images/copilot/23-user-data.png){#fig:23-user-data}
 
@@ -510,34 +510,33 @@ Copilot osaa myös täydentää koodia, kun kirjoitat jotain sinne päin. Voit h
 
 ### Omat komennot
 
-Copilotille voi määritellä omia komentoja, joita voi käyttää keskustelussa. Hämmentävästi komennot on nimetty "Prompt Files" ominaisuudeksi. Kokeillaan tätä luomalla komennot `/nuolita` joka vaihtaa kaikki tavalliset funktiot nuolifunktioiksi `()=>` ja `/funktioita` joka kääntää kaikki nuolifunktiot tavallisiksi funktioiksi.
+Copilotille voi määritellä omia komentoja, joita voi käyttää keskustelussa. Hämmentävästi komennot on nimetty "Prompt Files" -ominaisuudeksi. Kokeillaan tätä luomalla komennot `/nuolita`, joka vaihtaa kaikki tavalliset funktiot nuolifunktioiksi `()=>`, ja `/funktioita`, joka kääntää kaikki nuolifunktiot tavallisiksi funktioiksi.
 
 Valitse asetuksista "Prompt Files" (@fig:28-prompt-files).
 
 ![Valitse Prompt Files](images/copilot/28-prompt-files.png){#fig:28-prompt-files}
 
-Täsmälleen kuten Chat Instructions, luo uusi tiedosto ja valitse kohteeksi "User Data" jotta komennot ovat käytettävissä kaikissa projekteissa (@fig:29-user-data-prompt).
+Täsmälleen kuten Chat Instructions, luo uusi tiedosto ja valitse kohteeksi "User Data", jotta komennot ovat käytettävissä kaikissa projekteissa (@fig:29-user-data-prompt).
 
 ![Valitse User Data ja luo komennot](images/copilot/29-user-data-prompt.png){#fig:29-user-data-prompt}
 
-Sitten kirjoita `/nuolita` komennon sisällöksi esimerkiksi: *Tee kaikista function -funktioista nuolifunktioita*
+Sitten kirjoita `/nuolita`-komennon sisällöksi esimerkiksi: *Tee kaikista function-funktioista nuolifunktioita*
 
-Ja toiseen tiedostoon kirjoita `/funktioita` komennon sisällöksi esimerkiksi: *Tee kaikista nuolifunktioista tavallisia function -funktioita*
+Ja toiseen tiedostoon kirjoita `/funktioita`-komennon sisällöksi esimerkiksi: *Tee kaikista nuolifunktioista tavallisia function-funktioita*
 
-Nyt kun kirjoitat keskusteluun `/funktiota` tai `/nuolita` niin Copilot suorittaa komennon (@fig:30-omakomennot).
+Nyt kun kirjoitat keskusteluun `/funktioita` tai `/nuolita`, niin Copilot suorittaa komennon (@fig:30-omakomennot).
 
 ![Käytä omia komentoja](images/copilot/30-omakomennot.png){#fig:30-omakomennot}
 
-Ja copilot suorittaa komennon (@fig:31-komento-suoritettu).
+Ja Copilot suorittaa komennon (@fig:31-komento-suoritettu).
 
 ![Copilot suorittaa komennon](images/copilot/31-komento-suoritettu.png){#fig:31-komento-suoritettu}
 
-Kokeile `/funktioita` jälkeen `/nuolita` ja sitten taas `/funktioita` niin näet, että komennot toimivat molempiin suuntiin.
+Kokeile `/funktioita` jälkeen `/nuolita` ja sitten taas `/funktioita`, niin näet, että komennot toimivat molempiin suuntiin.
 
 ### Muut ominaisuudet
 
-Copilotissa on muitakin ominaisuuksia, mutta ne eivät ole mitenkään tarpeellisia päivittäiseen käyttöön. Ominaisuudet muuttuvat jatkuvasti ja osa ominaisuuksista on selkeästi päällekkäisiä ja kokeiluasteella. Voit tutustua niihin virallisessa dokumentaatiosta <https://code.visualstudio.com/docs/copilot/overview>.
-
+Copilotissa on muitakin ominaisuuksia, mutta ne eivät ole mitenkään tarpeellisia päivittäiseen käyttöön. Ominaisuudet muuttuvat jatkuvasti ja osa ominaisuuksista on selkeästi päällekkäisiä ja kokeiluasteella. Voit tutustua niihin virallisessa dokumentaatiossa <https://code.visualstudio.com/docs/copilot/overview>.
 
 TODO
 
@@ -587,7 +586,7 @@ Voit nyt lähettää aineiston tai esittää kysymyksesi.
 
 chatgpt.com ja muut "AI-palvelut" osaavat (yleensä) hakea sivun sisällön automaattisesti, mutta Copilotin kanssa sisältö pitää antaa käsin.
 
-Kokeillaan kuitenkin olla lähettämättä sivun sisältöä ja katsoa mitä tapahtuu kun valitsemme muutaman rivin.
+Kokeillaan kuitenkin olla lähettämättä sivun sisältöä ja katsoa, mitä tapahtuu kun valitsemme muutaman rivin.
 
 *tee näistä riveistä fragmentti*
 
@@ -612,7 +611,7 @@ Vaihtoehto 1:
 ...
 ```
 
-Voit myös tallentaa totuuksia tiedostoihin ja ladata ne tarvittaessa keskusteluun. Huomaa, että et voi suoraan pasteta alla olevan esimerkin #file:fragment.txt osaa, vaan sinun pitää itse kirjoittaa se (aloita painamalla #, joka avaa tiedostovalitsimen). Voit myös ladata tiedoston klikkaamalla paperiliitinkuvaketta keskusteluikkunassa.
+Voit myös tallentaa totuuksia tiedostoihin ja ladata ne tarvittaessa keskusteluun. Huomaa, että et voi suoraan pastea alla olevan esimerkin #file:fragment.txt osaa, vaan sinun pitää itse kirjoittaa se (aloita painamalla #, joka avaa tiedostovalitsimen). Voit myös ladata tiedoston klikkaamalla paperiliitinkuvaketta keskusteluikkunassa.
 
 *Sinulla on aineistona #file:fragment.txt - Vastaa tämän jälkeen kaikkiin kysymyksiini pelkästään annetun aineiston perusteella. Jos et löydä vastausta, vastaa "en tiedä" ja selitä miksi et.*
 
@@ -620,9 +619,9 @@ Voit myös tallentaa totuuksia tiedostoihin ja ladata ne tarvittaessa keskustelu
 Ymmärsin. Vastaan nyt kaikkiin kysymyksiisi pelkästään fragment.txt-tiedoston sisällön perusteella. Jos kysymyksesi koskee jotain, mitä ei ole mainittuna kyseisessä aineistossa, vastaan "en tiedä" ja selitän syyn.
 ```
 
-Copilotissa voit käyttää erityistä komentoa `#fetch`, jolla voit hakea verkkosivun sisällön suoraan keskusteluun ilman copy/pastea. Tällöin voit käyttää samaa totuustekniikkaa kuin yllä. Heikkoutena on, että emme suoraan näe onnistuiko sivun haku miten hyvin. Yleensä tämä kuitenkin riittää.
+Copilotissa voit käyttää erityistä komentoa `#fetch`, jolla voit hakea verkkosivun sisällön suoraan keskusteluun ilman copy/pastea. Tällöin voit käyttää samaa totuustekniikkaa kuin yllä. Heikkoutena on, että emme suoraan näe, onnistuiko sivun haku miten hyvin. Yleensä tämä kuitenkin riittää.
 
-*Hae sivun https://react.dev/reference/react/Fragment sisältö käyttämällä #fetch komentoa ja vastaa tämän jälkeen kaikkiin kysymyksiini pelkästään haetun aineiston perusteella. Jos et löydä vastausta, vastaa "en tiedä" ja selitä miksi et.*
+*Hae sivun https://react.dev/reference/react/Fragment sisältö käyttämällä #fetch-komentoa ja vastaa tämän jälkeen kaikkiin kysymyksiini pelkästään haetun aineiston perusteella. Jos et löydä vastausta, vastaa "en tiedä" ja selitä miksi et.*
 
 ```llm
 Fetched https://react.dev/reference/react/Fragment
@@ -657,7 +656,7 @@ Hyväksytkö (k) vai hylkäätkö (e) tämän ehdotuksen?
 
 Joskus tuntuu, että LLM kiertää kehää tai alkaa toistaa itseään. Tällöin on usein hyödyllistä "nollata" LLM:n tila, jotta se voi aloittaa puhtaalta pöydältä.
 
-Voit pyytää LLM:ää tiivistämään kaiken tähänastisen keskustelun lyhyesti ja antamaan se promptina jonka voit syöttää uuteen istuntoon. Näin LLM saa kontekstin, mutta unohtaa mahdolliset väärät polut tai ainakin pääsee eroon niistä.
+Voit pyytää LLM:ää tiivistämään kaiken tähänastisen keskustelun lyhyesti ja antamaan se promptina, jonka voit syöttää uuteen istuntoon. Näin LLM saa kontekstin, mutta unohtaa mahdolliset väärät polut tai ainakin pääsee eroon niistä.
 
 *Anna minulle tiivistelmä tähänastisesta keskustelustamme valmiina promptina, jotta voin aloittaa uuden istunnon kanssasi ilman huonoja polkuja joissa olet jumissa.*
 
@@ -685,16 +684,16 @@ Ymmärsin. Listaan kaikki tekemäni oletukset ennen vastaamista. En tee uusia ol
 
 ### TODO-lista
 
-LLM sisäistä toimintaa on helpompi seurata, kun pyydät sitä listaamaan tehtävät järjestyksessä ennen vastaamista. Lopuksi voit vielä pyytää sitä tarkistamaan, että kaikki tehtävät listalta on suoritettu.
+LLM:n sisäistä toimintaa on helpompi seurata, kun pyydät sitä listaamaan tehtävät järjestyksessä ennen vastaamista. Lopuksi voit vielä pyytää sitä tarkistamaan, että kaikki tehtävät listalta on suoritettu.
 
 *Refaktoroidaan tämä koodi pienempiin osiin. Tee numeroitu TODO-lista, mutta älä tee muuta*
 
 ```text
 TODO-lista koodin refaktorointiin:
 
-1. Luo Part komponentti - Yksittäinen osa, joka näyttää yhden kurssin osan nimen ja harjoitusten määrän
+1. Luo Part-komponentti - Yksittäinen osa, joka näyttää yhden kurssin osan nimen ja harjoitusten määrän
 
-2. Refaktoroi Content komponentti - Käytä Part komponenttia kolme kertaa kovakoodattujen <p> elementtien sijaan
+2. Refaktoroi Content-komponentti - Käytä Part-komponenttia kolme kertaa kovakoodattujen <p> elementtien sijaan
 
 ...
 ```
@@ -703,10 +702,9 @@ Nyt voit muokata listaa tai pyytää lisätietoja ennen kuin mitään tapahtuu.
 
 *Kerro lisää kohdasta 2*
 
-tai 
+tai
 
 *Älä tee kohtaa 2, mutta muuten näyttää hyvältä*
-
 
 ## Visual Studio Copilot
 
@@ -715,8 +713,7 @@ Copilot voi vastata kysymyksiin "Ask"-tilassa ja kirjoittaa koodia puolestasi "A
 - Copilotin ikkunan hukkuminen
 - Useampi chat rinnakkain
 
-### Koodin selittäminen ja virheiden etsiminen 
-
+### Koodin selittäminen ja virheiden etsiminen
 
 Kun käytät Copilotia koodin kirjoittamiseen, on tärkeää kysyä, mitä jokin tietty osa tekee. Voit valita koodin, jota et ymmärrä, tai liittää koko tiedoston kontekstiksi keskusteluun ja esittää kysymyksen “Mitä tämä tekee?” tai “Selitä, mitä tämä tiedosto tekee”.
 
