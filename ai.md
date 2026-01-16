@@ -1,4 +1,8 @@
-# AI-avusteinen ohjelmistokehitys
+---
+title: "AI-avusteinen ohjelmistokehitys"
+figureTitle: "Kuva"
+figPrefix: "kuva"
+---
 
 Tämän materiaalin tarkoituksena on auttaa ohjelmistokehittäjiä ymmärtämään, mitä AI (Artificial Intelligence, tekoäly) on, miten se liittyy ohjelmistokehitykseen, ja miten hyödyntää AI-työkaluja, kuten Visual Studio Coden Copilotia, tehokkaasti omassa työssään.
 
@@ -356,12 +360,184 @@ Välillä AI luo loistavaa koodia, mutta välillä joudut muistuttamaan AI:ta sa
 
 Ilman AI-apua ohjelmointi saattaisi välillä olla jopa mielekkäämpää. Oleellista on löytää oikea tasapaino AI:n käytössä, jotta se tukee kehittäjää ilman, että se aiheuttaa liikaa ylimääräistä työtä tai turhautumista.
 
-
 ## Visual Studio Copilot
 
 Visual Studio Copilot on yksi suosituimmista AI-avusteisen ohjelmoinnin työkaluista. Se integroituu suoraan Visual Studio Code -editoriin ja tarjoaa reaaliaikaisia koodiehdotuksia ja automaattista täydennystä käyttäjän kirjoittaessa koodia. Lisäksi se osaa toimia itsenäisesti "Agent"-tilassa.
 
-### TODO: copilot-osio tähän
+Ohjeet kaikkeen löytyy Copilotin virallisesta dokumentaatiosta <https://code.visualstudio.com/docs/copilot/overview>, mutta tässä on lyhyt opas Copilotin peruskäyttöön.
+
+### Asennus
+
+Copilot tulee oletuksena mukana Visual Studio Codessa.
+
+### Kirjautuminen
+
+Copilot edellyttää, että kirjaudut sisään GitHub-tililläsi. Kuvassa (@fig:0-sign-in) valitaan "Continue with GitHub" ja seurataan ohjeita.
+
+![Kirjautuminen sisään](images/copilot/0-sign-in.png){#fig:0-sign-in}
+
+### Copilot hukassa?
+
+Jos Copilot ei näy, etsi se Visual Studio Coden oikeasta yläkulmasta (@fig:1-copilot).
+
+![Copilot hukassa? Paina ylhäältä](images/copilot/1-copilot.png){#fig:1-copilot}
+
+### Kokeillaan Copilotia
+
+Luodaan uusi tiedosto summa.js (@fig:2-newfile) jolla kokeillaan Copilotin toimintaa.
+
+![Uusi tiedosto](images/copilot/2-newfile.png){#fig:2-newfile}
+
+Anna tiedostolle nimi `summa.js` ja tallenna esimerkiksi työpöydälle (@fig:3-name).
+
+![Tallenna tiedosto](images/copilot/3-name.png){#fig:3-name}
+
+Nyt tiedosto on luotu ja Copilot on valmis auttamaan oikealla (@fig:4-auki).
+
+![Valmiina!](images/copilot/4-auki.png){#fig:4-auki}
+
+### Copilotin toimintatilat
+
+Copilotissa on kaksi pääasiallista toimintatilaa: Ask ja Agent. Vaihdetaan tila nyt "Ask"-tilaan jossa voimme esittää kysymyksiä (@fig:5-vaihda-tila).
+
+![Copilotin tilaa voi vaihtaa täältä](images/copilot/5-vaihda-tila.png){#fig:5-vaihda-tila}
+
+Vaihda tila "Ask"-tilaan (@fig:6-ask).
+
+![Valitse Ask-tila](images/copilot/6-ask.png){#fig:6-ask}
+
+### Käytettävä malli
+
+Kannattaa vaihtaa käytettäväksi malliksi "auto" jolloin Copilot valitsee mallin (@fig:7-malli). Muita malleja saa käyttöön maksamalla erikseen.
+
+![Valitse auto-malli](images/copilot/7-malli.png){#fig:7-malli}
+
+### Kysytään Copilotilta
+
+Nyt vihdoin voimme kysyä jotain Copilotilta, huomaa kun summa.js tiedosto on auki, Copilot osaa käyttää tiedoston sisältöä kontekstina. Oletuksena avattu tiedosto on kontekstina kuten #fig:8-kysymys-kontekstilla näkyy. Voit lisätä tiedostoja kontektiksi myös itse.
+
+Kysy Copilotilta: *miten tehdään summafunktio?*
+
+![Kysytään Copilotilta](images/copilot/8-kysymys-kontekstilla.png){#fig:8-kysymys-kontekstilla}
+
+Copilot vastaa (@fig:9-kysytty) ja tarjoaa koodin, joka laskee kahden luvun summan.
+
+![Copilotin vastaus](images/copilot/9-kysytty.png){#fig:9-kysytty}
+
+Voimme jatkaa keskustelua ja pyytää toisenlaista ratkaisua (@fig:10-jatketaan).
+
+![Jatketaan keskustelua](images/copilot/10-jatketaan.png){#fig:10-jatketaan}
+
+Kun Copilot tarjoaa ratkaisun, tietysti kopioda sen, mutta myös suoraan sijoittaa tiedostoon (@fig:11-sijoita).
+
+![Sijoita Copilotin vastaus](images/copilot/11-sijoita.png){#fig:11-sijoita}
+
+Sitten voit vielä hyväksyä tai hylätä Copilotin muutoksen joko yksi kerrallaan tai kaikki kerralla (@fig:12-hyvaksy-hylkaa). Tässä esimerkissä on vain yksi muutos, joten hyväksytään se.
+
+![Hyväksy tai hylkää Copilotin muutos](images/copilot/12-hyvaksy-hylkaa.png){#fig:12-hyvaksy-hylkaa}
+
+### Agentti-tila
+
+Sitten kokeilemme Agentti-tilaa, jossa Copilot voi itse muokata koodia puolestamme. Vaihdetaan Agentti-tilaan (@fig:13-vaihda-agenttiin).
+
+![Vaihda Agentti-tilaan](images/copilot/13-vaihda-agenttiin.png){#fig:13-vaihda-agenttiin}
+
+Ja sitten maalataan rivit joita tarkoitamme, jotta Copilot tietää mihin viittaamme ja pyydetään poistamaan kommentit (@fig:14-maalataan-rivit).
+
+![Maalaa rivit](images/copilot/14-maalataan-rivit.png){#fig:14-maalataan-rivit}
+
+Copilot pyytää lupaa muokata tiedostoja kovalevyllä - kannattaa hyväksyä, vaikkakin tällöin Copilot tekee muutokset aina kysymättä mihin tahansa tiedostoon. Vaihtoehtona on, että joudut aina erikseen hyväksymään (@fig:15-lupa-muokata).
+
+![Lupa muokata tiedostoja](images/copilot/15-lupa-muokata.png){#fig:15-lupa-muokata}
+
+Nyt Copilot on poistanut kommentit - poistuvat rivit näkyvät punaisella, hyväksy muutos (@fig:16-agentti-muokkaa)
+
+![Copilot on poistanut kommentit](images/copilot/16-agentti-muokkaa.png){#fig:16-agentti-muokkaa}
+
+Lisää vielä funktio keskiarvo ja kokeile, että Copilot saa muokata tiedostoja ilman erillistä lupaa (@fig:17-keskiarvo).
+
+![Lisää funktio keskiarvo - pitäisi tapahtua ilman kyselyjä](images/copilot/17-keskiarvo.png){#fig:17-keskiarvo}
+
+### Uusi keskustelu ja vanhat keskustelut
+
+Edellä jatkoimme vanhaa keskustelua, mutta yleensä kannattaa aloittaa aina uusi keskustelu. Aloita uusi keskustelu painamalla (@fig:18-uusi-keskustelu) näkyvistä valinnoista.
+
+![Aloita uusi keskustelu](images/copilot/18-uusi-keskustelu.png){#fig:18-uusi-keskustelu}
+
+Tämän jälkeen näet vanhat keskustelut yläpuolella ja voit vielä palata niihin myöhemmin (@fig:19-vanhat-keskustelut).
+
+![Vanhat keskustelut](images/copilot/19-vanhat-keskustelut.png){#fig:19-vanhat-keskustelut}
+
+### Omat säännöt
+
+Copilotille voi määritellä, että se noudattaa tiettyjä sääntöjä koodia luodessaan. Kokeillaan tätä luomalla vielä yksi funktio, joka laskee liukuvan keskiarvon taulukosta. Koska funktio on hieman pidempi, on lähes varmaa, että Copilot lisää siihen taas kommentteja. Tavoitteenamme on saada Copilot luomaan funktio ilman kommentteja ja ilman, että joudumme erikseen pyytämään sitä.
+
+Sano Copilotille: *lisää funktio joka laskee liukuvan keskiarvon taulukosta* (@fig:20-liukuva-keskiarvo).
+
+![Kommentit tulevat mukana väkisin](images/copilot/20-liukuva-keskiarvo.png){#fig:20-liukuva-keskiarvo}
+
+Ja sieltähän ne kommentit taas tulevat. Copilot ei muista aiempia keskusteluja, joten meidän on helpompi määrittää meidän tyylimme mukaiset säännöt erikseen.
+
+Valitse asetuksista "Chat Instructions" (@fig:21-chat-instructions).
+
+![Valitse Chat Instructions](images/copilot/21-chat-instructions.png){#fig:21-chat-instructions}
+
+Ja sitten paina enter valitaksesi "New instruction file" (@fig:22-new-instruction-file).
+
+![Valitse New instruction file](images/copilot/22-new-instruction-file.png){#fig:22-new-instruction-file}
+
+Sitten valitse "User Data" jotta ohjeet ovat aina käytössä riippumatta projektista (@fig:23-user-data).
+
+![Valitse User Data](images/copilot/23-user-data.png){#fig:23-user-data}
+
+Sitten anna jokin nimi tiedostolle, esimerkiksi "ohjeet" (@fig:24-nimi).
+
+![Anna nimi ohje-tiedostolle](images/copilot/24-nimi.png){#fig:24-nimi}
+
+Sitten vihdoin pääset kirjoittamaan ohjeen, esimerkiksi: *Älä koskaan generoi kommentteja, ellei erikseen pyydetä. Kommentit voivat olla harhaanjohtavia tai vanhentuneita, joten on parasta jättää ne pois, ellei niitä nimenomaisesti tarvita* (@fig:25-ohje).
+
+![Kirjoita ohjeet](images/copilot/25-ohje.png){#fig:25-ohje}
+
+Sitten kun tallennat tiedoston ja kokeilet uudestaan, niin Copilot noudattaa ohjeita. Kannattaa vielä varmistaa kysymällä, että ohje on ollut mukana (@fig:26-ilman-kommentteja).
+
+![Copilot noudattaa ohjeita](images/copilot/26-ilman-kommentteja.png){#fig:26-ilman-kommentteja}
+
+### Täydennys
+
+Copilot osaa myös täydentää koodia, kun kirjoitat jotain sinne päin. Voit hyväksyä ehdotuksen painamalla tab-näppäintä (@fig:27-taydennys).
+
+![Copilot osaa täydentää koodia](images/copilot/27-taydennys.png){#fig:27-taydennys}
+
+### Omat komennot
+
+Copilotille voi määritellä omia komentoja, joita voi käyttää keskustelussa. Hämmentävästi komennot on nimetty "Prompt Files" ominaisuudeksi. Kokeillaan tätä luomalla komennot `/nuolita` joka vaihtaa kaikki tavalliset funktiot nuolifunktioiksi `()=>` ja `/funktioita` joka kääntää kaikki nuolifunktiot tavallisiksi funktioiksi.
+
+Valitse asetuksista "Prompt Files" (@fig:28-prompt-files).
+
+![Valitse Prompt Files](images/copilot/28-prompt-files.png){#fig:28-prompt-files}
+
+Täsmälleen kuten Chat Instructions, luo uusi tiedosto ja valitse kohteeksi "User Data" jotta komennot ovat käytettävissä kaikissa projekteissa (@fig:29-user-data-prompt).
+
+![Valitse User Data ja luo komennot](images/copilot/29-user-data-prompt.png){#fig:29-user-data-prompt}
+
+Sitten kirjoita `/nuolita` komennon sisällöksi esimerkiksi: *Tee kaikista function -funktioista nuolifunktioita*
+
+Ja toiseen tiedostoon kirjoita `/funktioita` komennon sisällöksi esimerkiksi: *Tee kaikista nuolifunktioista tavallisia function -funktioita*
+
+Nyt kun kirjoitat keskusteluun `/funktiota` tai `/nuolita` niin Copilot suorittaa komennon (@fig:30-omakomennot).
+
+![Käytä omia komentoja](images/copilot/30-omakomennot.png){#fig:30-omakomennot}
+
+Ja copilot suorittaa komennon (@fig:31-komento-suoritettu).
+
+![Copilot suorittaa komennon](images/copilot/31-komento-suoritettu.png){#fig:31-komento-suoritettu}
+
+Kokeile `/funktioita` jälkeen `/nuolita` ja sitten taas `/funktioita` niin näet, että komennot toimivat molempiin suuntiin.
+
+### Muut ominaisuudet
+
+Copilotissa on muitakin ominaisuuksia, mutta ne eivät ole mitenkään tarpeellisia päivittäiseen käyttöön. Ominaisuudet muuttuvat jatkuvasti ja osa ominaisuuksista on selkeästi päällekkäisiä ja kokeiluasteella. Voit tutustua niihin virallisessa dokumentaatiosta <https://code.visualstudio.com/docs/copilot/overview>.
+
 
 TODO
 
