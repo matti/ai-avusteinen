@@ -1,0 +1,3 @@
+[submodule "fullstack-hy2020.github.io"]
+	path = fullstack-hy2020.github.io
+	url = https://github.com/ai-avusteinen/fullstack-hy2020.github.io.git
