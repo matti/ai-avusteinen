@@ -2,4 +2,8 @@
 
 set -eEuo pipefail
 
-pandoc ai.md -o ai.html --toc --standalone -c styles.css --filter /opt/pandoc-crossref/pandoc-crossref
+pandoc index.md -o public/index.html \
+  --toc --standalone -c styles.css \
+  --filter /opt/pandoc-crossref/pandoc-crossref
+
+echo "OK"
